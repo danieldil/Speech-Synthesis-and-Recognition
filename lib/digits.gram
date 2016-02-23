@@ -1,0 +1,26 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Digits Grammar file
+ */
+ 
+grammar digits;
+
+public <command>	= (<verb> <noun> <article> <number> <measure>)|(<report>)|(thank you)|(emergency) |(<bool>);
+<report>			= (report <snoun>);
+<verb>	 			= (change | alter | ascend | descend | fly);
+<noun>  		 	= (height | drone);
+<snoun>				= (height | latitude | longitude | destination);
+<article>			= (to);
+<number>			= (<digit> | <digit><number>);
+<digit>				= (one | two | three | four | five | six | seven | eight | nine | zero);
+<measure>			= (feet | meters | altitude );
+<bool>				= (yes|no);
+
+public<latlong>		= (<V> <L> <article> <value> <number> <P> <number>)|(<V><L><article><value><number>);
+<value>				= (plus|minus);
+<V>					= (set);
+<L>					= (latitude|longitude);
+<P>					= (point);
+
+

@@ -1,0 +1,18 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Digits Grammar for Hello World example
+ */
+
+grammar digits;
+
+public <command>	= (<verb> <noun> <article> <number> <measure>)|(<report>)|(thank you) ;
+<report>			= (report <snoun> | How is <snoun>);
+<verb>	 			= (change | alter | ascend | descend | fly);
+<noun>  		 	= (height | drone);
+<snoun>				= (height | battery | speed | the battery | the height | the speed);
+<article>			= (to);
+<number>			= (<digit> | <digit><number>);
+<digit>				= (one | two | three | four | five | six | seven | eight | nine | zero);
+<measure>			= (feet | meters | altitude );
+
